@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  position: absolute;
+  height: 25vh;
+  top: 0vh;
+  width: 100%;
+  z-index: 1000; /* Optional: to ensure it stays on top */
+}
+
+  @footer (max-width: 768px) {
+    .header {
+      padding: 2rem 10%;
+    }
+
+  }

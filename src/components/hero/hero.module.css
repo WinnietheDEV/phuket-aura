@@ -1,0 +1,101 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Optional: to ensure it stays on top */
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-size: 1.25rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ddd6cb;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.nav a:hover,
+.nav a:active {
+  background: linear-gradient(90deg, #ff8a05, #f9b331);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 18px rgba(248, 190, 42, 0.8);
+}
+
+.active {
+  background: linear-gradient(90deg, #ff8a05, #f9b331);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero {
+  background-image: url('../../assets/hero-car.webp');
+  background-size: cover; /* Makes the background image cover the entire element */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  height: 75vh; /* Full viewport height */
+  width: 100%; /* Full width */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  text-decoration: none;
+  color: #ddd6cb;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.logo img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
+}
+
+.hero-text-container {
+    position: absolute;
+    right: 4rem;
+    top: 10rem;
+    max-width: 45%;
+}
+
+  .title {
+    text-align: right; /* Default alignment for larger screens */
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    text-align: right; /* Default alignment for larger screens */
+    font-size: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .header {
+      padding: 2rem 10%;
+    }
+
+    .title {
+      text-align: center; /* Center align on mobile screens */
+      font-size: 2rem;
+    }
+  }
