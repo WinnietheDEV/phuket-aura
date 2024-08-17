@@ -6,7 +6,7 @@ export const toyotaCars = [
     {
         id: 1,
         title: 'Yaris',
-        qualities: ['durable', 'easy to drive', 'agile'],
+        qualities: [{type: 'seat', value: '4'}, {type: 'engine', value:'1,500 CC.'}, {type: 'fuel', value: 'Gasohol 95'}],
         price: '1000/day',
         image: (
             <Image
@@ -20,7 +20,7 @@ export const toyotaCars = [
     {
         id: 2,
         title: 'Vios',
-        qualities: ['durable', 'easy to drive', 'agile'],
+        qualities: [{type: 'seat', value: '4'}, {type: 'engine', value:'1,500 CC.'}, {type: 'fuel', value: 'Gasohol 95'}],
         price: '1000/day',
         image: (
             <Image

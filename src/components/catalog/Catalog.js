@@ -14,6 +14,7 @@ import styles from './catalog.module.css';
 import Carousel from 'react-material-ui-carousel';
 import { useState } from 'react';
 import { toyotaCars } from './toyotaCars';
+import AirlineSeatReclineNormalIcon from '@mui/icons-material/AirlineSeatReclineNormal';
 
 export default function Catalog() {
     const [value, setValue] = useState(0);
@@ -70,10 +71,18 @@ export default function Catalog() {
                         </Carousel>
                     </CustomTabPanel>
                     <CustomTabPanel value={value} index={1}>
-                        Item Two
+                    <Carousel>
+                            {toyotaCars.map((car, i) => {
+                                return <Car key={i} {...car} />;
+                            })}
+                        </Carousel>
                     </CustomTabPanel>
                     <CustomTabPanel value={value} index={2}>
-                        Item Three
+                    <Carousel>
+                            {toyotaCars.map((car, i) => {
+                                return <Car key={i} {...car} />;
+                            })}
+                        </Carousel>
                     </CustomTabPanel>
                 </Box>
             </Container>
@@ -111,15 +120,31 @@ function Car({ qualities, title, price, image }) {
                     {image}
                     <Typography variant="h5" paddingBottom={6}>{title}</Typography>
                 </Stack>
-                <Stack width={'50%'}>
+                <Stack width={'25%'}>
                     <ul>
                         {qualities.map((quality) => (
-                            <li key={quality}>{quality}</li>
+                            Quality(quality)
                         ))}
                     </ul>
-                    <Typography>{price}</Typography>
+                </Stack>
+                <Stack width={'25%'}>
+                    <Typography>900 Baht/Day</Typography>
+                    <Typography>6,000 Baht/Week</Typography>
+                    <Typography>20,000 Baht/Month</Typography>
                 </Stack>
             </Stack>
         </Paper>
     );
+}
+
+function Quality (props) {
+    const {type, value} = props
+    if (type === 'seat'){
+        return <div><AirlineSeatReclineNormalIcon /><span>{value}</span></div>
+    } else if (type === 'engine') {
+        return <div><AirlineSeatReclineNormalIcon /><span>{value}</span></div>
+    } else if (type === 'fuel') {
+        return <div><AirlineSeatReclineNormalIcon /><span>{value}</span></div>
+
+    }
 }
