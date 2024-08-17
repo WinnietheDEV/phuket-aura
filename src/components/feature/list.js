@@ -14,25 +14,30 @@ export const features = [
                 className="icon-feature"
             />
         ),
+        description: 'sdfdsfsdfsdfdfds',
     },
     {
         title: 'First class insurance',
         icon: (
             <LooksOneIcon sx={{ fontSize: '2rem' }} className="icon-feature" />
         ),
+        description: 'sdfdsfsdfsdfdfds',
     },
     {
         title: 'Test drive',
         icon: (
             <DriveEtaIcon sx={{ fontSize: '2rem' }} className="icon-feature" />
         ),
+        description: 'sdfdsfsdfsdfdfds',
     },
     {
         title: 'Unlimited mile',
         icon: <RouteIcon sx={{ fontSize: '2rem' }} className="icon-feature" />,
+        description: 'sdfdsfsdfsdfdfds',
     },
     {
         title: '24 hrs service',
         icon: <UpdateIcon sx={{ fontSize: '2rem' }} className="icon-feature" />,
+        description: 'sdfdsfsdfsdfdfds',
     },
 ];

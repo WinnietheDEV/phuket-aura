@@ -1,7 +1,38 @@
 .feature {
-  padding-top: 3rem;
+    padding-top: 3rem;
 }
 
 .title {
-  font-size: 1.75rem;
+    font-size: 1.75rem;
+}
+
+.card-container {
+    perspective: 1000px;
+}
+
+.card-container .card-front,
+.card-container .card-back {
+    width: 300px;
+    height: 200px;
+    transition: transform 0.6s;
+}
+
+.card-front {
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.flipped .card-front {
+    transform: rotateY(-180deg);
+}
+
+.flipped .title {
+    transform: rotateY(-180deg);
+}
+
+.flipped .card-back {
+    transform: rotateY(0deg);
 }

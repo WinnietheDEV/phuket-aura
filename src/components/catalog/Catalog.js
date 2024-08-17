@@ -22,7 +22,6 @@ export default function Catalog() {
         setValue(newValue);
     };
 
-
     function CustomTabPanel(props) {
         const { children, value, index, ...other } = props;
 
@@ -49,7 +48,7 @@ export default function Catalog() {
     console.log(toyotaCars);
 
     return (
-        <div className={`${styles['catalog']}`}>
+        <div className={`${styles['catalog']}`} id="catalog">
             <Container sx={{ margin: 0, minWidth: '100%' }}>
                 <Box sx={{ width: '100%' }}>
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -71,14 +70,14 @@ export default function Catalog() {
                         </Carousel>
                     </CustomTabPanel>
                     <CustomTabPanel value={value} index={1}>
-                    <Carousel>
+                        <Carousel>
                             {toyotaCars.map((car, i) => {
                                 return <Car key={i} {...car} />;
                             })}
                         </Carousel>
                     </CustomTabPanel>
                     <CustomTabPanel value={value} index={2}>
-                    <Carousel>
+                        <Carousel>
                             {toyotaCars.map((car, i) => {
                                 return <Car key={i} {...car} />;
                             })}
@@ -92,7 +91,7 @@ export default function Catalog() {
 
 function Car({ qualities, title, price, image }) {
     return (
-        <Paper sx={{ minHeight: '10rem' }}>
+        <Paper sx={{ minHeight: '10rem' }} key={title}>
             <Stack direction={'row'}>
                 <Stack
                     width={'50%'}
@@ -118,14 +117,12 @@ function Car({ qualities, title, price, image }) {
                         
                     </div> */}
                     {image}
-                    <Typography variant="h5" paddingBottom={6}>{title}</Typography>
+                    <Typography variant="h5" paddingBottom={6}>
+                        {title}
+                    </Typography>
                 </Stack>
                 <Stack width={'25%'}>
-                    <ul>
-                        {qualities.map((quality) => (
-                            Quality(quality)
-                        ))}
-                    </ul>
+                    <ul>{qualities.map((quality) => Quality(quality))}</ul>
                 </Stack>
                 <Stack width={'25%'}>
                     <Typography>900 Baht/Day</Typography>
@@ -137,14 +134,28 @@ function Car({ qualities, title, price, image }) {
     );
 }
 
-function Quality (props) {
-    const {type, value} = props
-    if (type === 'seat'){
-        return <div><AirlineSeatReclineNormalIcon /><span>{value}</span></div>
+function Quality(props) {
+    const { type, value } = props;
+    if (type === 'seat') {
+        return (
+            <div>
+                <AirlineSeatReclineNormalIcon />
+                <span>{value}</span>
+            </div>
+        );
     } else if (type === 'engine') {
-        return <div><AirlineSeatReclineNormalIcon /><span>{value}</span></div>
+        return (
+            <div>
+                <AirlineSeatReclineNormalIcon />
+                <span>{value}</span>
+            </div>
+        );
     } else if (type === 'fuel') {
-        return <div><AirlineSeatReclineNormalIcon /><span>{value}</span></div>
-
+        return (
+            <div>
+                <AirlineSeatReclineNormalIcon />
+                <span>{value}</span>
+            </div>
+        );
     }
 }
