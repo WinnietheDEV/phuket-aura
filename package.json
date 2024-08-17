@@ -12,6 +12,7 @@
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "react-material-ui-carousel": "^3.4.2"
+    "react-material-ui-carousel": "^3.4.2",
+    "sharp": "^0.33.5"
   }
 }
