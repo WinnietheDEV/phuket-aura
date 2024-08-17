@@ -4,15 +4,10 @@ import styles from './hero.module.css';
 export default function Hero() {
     return (
         <div id="hero" className={`${styles['hero']}`}>
-            <Container>
-                <div className={styles['hero-text-container']}>
-                    <h1 className={styles['title']}>Phuket Aura</h1>
-                    <h2 className={styles['tagline']}>
-                        Over a Decade of Excellence: Trust Our 10+ Years in Car
+                    <h1 className={styles['tagline']}>
+                        Trust Our <span style={{color: 'red'}}>10+</span> Years in <br/>Car
                         Rental Expertise!
-                    </h2>
-                </div>
-            </Container>
+                    </h1>
         </div>
     );
 }

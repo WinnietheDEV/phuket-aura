@@ -55,6 +55,7 @@
     background-repeat: no-repeat; /* Prevent the image from repeating */
     height: 75vh; /* Full viewport height */
     width: 100%; /* Full width */
+    position: relative
 }
 
 .logo {
@@ -79,10 +80,9 @@
 }
 
 .hero-text-container {
-    position: absolute;
-    right: 4rem;
-    top: 10rem;
-    max-width: 45%;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 100%;
 }
 
 .title {
@@ -92,9 +92,13 @@
 }
 
 .tagline {
-    text-align: right; /* Default alignment for larger screens */
+    text-align: center; /* Default alignment for larger screens */
     font-size: 2rem;
     color: #ffea2e;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
 }
 
 @media (max-width: 768px) {

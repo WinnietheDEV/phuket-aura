@@ -21,16 +21,6 @@ export default function Catalog() {
         setValue(newValue);
     };
 
-    var items = [
-        {
-            name: 'Random Name #1',
-            description: 'Probably the most random thing you have ever seen!',
-        },
-        {
-            name: 'Random Name #2',
-            description: 'Hello World!',
-        },
-    ];
 
     function CustomTabPanel(props) {
         const { children, value, index, ...other } = props;
@@ -102,7 +92,7 @@ function Car({ qualities, title, price, image }) {
                     alignItems={'center'}
                     position={'relative'}
                 >
-                    <div
+                    {/* <div
                         style={{
                             minWidth: '100%',
                             minHeight: '100%',
@@ -112,14 +102,14 @@ function Car({ qualities, title, price, image }) {
                         rgba(0, 30, 138, 1),
                         rgba(0, 30, 138, 1)
                     )`,
-                            clipPath: 'polygon(0 0, 25% 0, 10% 100%, 0 100%)',
+                            clipPath: 'polygon(0 0, 15% 0, 5% 100%, 0 100%)',
                             zIndex: 1,
                         }}
                     >
-                        s
-                    </div>
+                        
+                    </div> */}
                     {image}
-                    <Typography variant="h5">{title}</Typography>
+                    <Typography variant="h5" paddingBottom={6}>{title}</Typography>
                 </Stack>
                 <Stack width={'50%'}>
                     <ul>

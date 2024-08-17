@@ -9,7 +9,7 @@ import MuiAccordionSummary, {
 } from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import styles from './faq.module.css';
+import styles from './info.module.css';
 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -52,7 +52,7 @@ export default function Faq() {
     };
 
     return (
-        <div className={`${styles['faq']}`}>
+        <>
             <Accordion
                 expanded={expanded === 'panel1'}
                 onChange={handleChange('panel1')}
@@ -61,15 +61,11 @@ export default function Faq() {
                     aria-controls="panel1d-content"
                     id="panel1d-header"
                 >
-                    <Typography>Collapsible Group Item #1</Typography>
+                    <Typography>Do I need to pay to reserve the car?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse malesuada lacus ex, sit amet blandit leo
-                        lobortis eget. Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
+                    No, you can just pay on the day you use the car.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -81,15 +77,16 @@ export default function Faq() {
                     aria-controls="panel2d-content"
                     id="panel2d-header"
                 >
-                    <Typography>Collapsible Group Item #2</Typography>
+                    <Typography>What documents are required to rent a car?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse malesuada lacus ex, sit amet blandit leo
-                        lobortis eget. Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
+                    1. Driver's License
+                    <br/>
+                        2. Identification
+                        <br/>
+                        3. Reservation Confirmation
+                    
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -101,18 +98,14 @@ export default function Faq() {
                     aria-controls="panel3d-content"
                     id="panel3d-header"
                 >
-                    <Typography>Collapsible Group Item #3</Typography>
+                    <Typography>Do you provide utility items such as a GPS or a baby seat?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse malesuada lacus ex, sit amet blandit leo
-                        lobortis eget. Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
+                    Yes, we offer those items, but they come at an additional cost.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-        </div>
+        </>
     );
 }

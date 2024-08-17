@@ -2,7 +2,7 @@ import Hero from '@/components/hero/Hero';
 import Feature from '@/components/feature/Feature';
 import Catalog from '@/components/catalog/Catalog';
 import Step from '@/components/step/Step';
-import Faq from '@/components/faq/Faq';
+import Info from '@/components/info/Info';
 
 export default function Home() {
     return (
@@ -11,7 +11,7 @@ export default function Home() {
             <Feature />
             <Catalog />
             <Step />
-            <Faq />
+            <Info />
         </main>
     );
 }

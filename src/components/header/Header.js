@@ -3,6 +3,8 @@
 import { useEffect } from 'react';
 import styles from './header.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
+import logo from '../../assets/phuket-aura-logo.png'
 
 export default function Header() {
     useEffect(() => {
@@ -31,19 +33,7 @@ export default function Header() {
 
     return (
         <header id="navbar" className={styles.header}>
-            <nav className={styles.nav}>
-                <ul>
-                    <li>
-                        <p>Tel-089-344-3939 k.praew</p>
-                    </li>
-                    <li>
-                        <p>Facebook</p>
-                    </li>
-                    <li>
-                        <p>instagram</p>
-                    </li>
-                </ul>
-            </nav>
+            <Image src={logo} height={50} width={150}/>
             <nav className={styles.nav}>
                 <ul>
                     <li>
